@@ -1,0 +1,20 @@
+let buttons = document.querySelectorAll('.artdeco-button')
+
+function wait(ms) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Done waiting");
+      resolve(ms)
+    }, ms )
+  })
+}  
+
+(async function main() {
+for(let i = 0; i < buttons.length; i++){
+    if (buttons[i].innerText == "Accept") {
+        // buttons[i].click()
+        console.log(buttons[i].click())
+        await wait(3000)
+    }
+}
+})()
